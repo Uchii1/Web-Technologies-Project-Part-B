@@ -161,6 +161,13 @@
             animation: fadeInUp 0.6s ease-out forwards;
         }
 
+/*The below contrains content width on some of the pages*/
+    .content{
+    margin: 0 auto;
+    max-width: 2000px;
+    padding: 40px 0; 
+}
+
 /*Format of the 'get involved' button */
         .btn {
             background-color: cornsilk;
@@ -455,3 +462,4 @@
         footer p {
             font-size: 15px;
         }
+
