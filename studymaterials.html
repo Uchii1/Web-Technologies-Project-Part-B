@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<!-- Setting html document language to English-->
+<html lang = "en">
+
+<!-- Settings for character encoding and device compatibility-->
+<meta charset = "UTF-8">
+<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- HEAD: Page title, favicon and linking to CSS and JavaScript libraries-->
+<head> 
+  <title> Study Materials - Dynamic Tutors </title> 
+  <link rel="icon" type="Image/jpg" href="logo-favicon.ico">
+  <link rel="stylesheet" href="index.css">
+
+  <!-- JavaScript libraries for scroltrigger animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<!-- BODY of Webpage-->
+<body>
+  
+  <!--The "content" div class aligns items to the page center-->
+  <div class="content">
+
+  <!-- Header for top of page-->
+  <header>
+    <div class="header">
+    
+      <!-- logo is styled with CSS --> 
+      <img src="logo.jpg" class="logo" alt="Logo">
+      
+      <div>
+        <h1> Dynamic Tutors</h1>
+        <p>... Catalysing Sustained Progress and Momentum for Learning</p>
+      </div>
+    </div>
+</header>
+
+<!-- Navigation Bar-->
+<nav>
+  <a href="index5.html"> Home  </a> 
+  <a href="join.html"> Join Us </a>
+  <a href="about.html"> About Us </a> 
+  <a href="contact.html"> Contact Us </a> 
+</nav>
+
+
+<!-- Main Content of the Page-->
+
+<h1 class="roll-text" style= "text-align: center; margin:3rem 0;" align="center"> Helpful Study Materials </h1>
+
+<!--Study Timetable Template -->
+<h2 class="roll-text"> Study Timetable Template </h2>
+
+  <p style="font-size:20px;"> The below is a downloadable PDF template for a personal study planner. <br>
+    Feel free to fill it in, or use it as a guide to create your own a study plan  specialised to your needs.
+    <a href="studytimetable.pdf" download="custom-name.pdf">Download PDF Study Timetable</a>
+  </p>
+
+<!--Pomodoro timer-->
+<h2 class="roll-text-right">  Pomodoro Timer </h2>
+  
+  <div id="timer-padding">
+    <div id="timer"> 25:00 </div>
+  </div>
+
+  <p>
+    <div class="buttons">
+    <button id="work"> Set Work </button>
+    <button id = "break"> Set Break</button>
+    <button id="start" > Start Timer </button>
+    <button id="pause"> Pause Timer</button>
+    </div>
+  </p>
+
+  <p style="font-size: 28px;"><b>Instructions</b> </p>
+  <p style="font-size:20px;">Click<strong> Set Work </strong> and then click 
+    <strong> Start Timer</strong> to set a 25 minute work period. The timer automatically begins a break period after this.<br>
+    To start a break earlier, click <strong> Set Break</strong> and then <strong> Start Timer</strong>. 
+  </p>
+
+
+<!--Specific CSS styling for the timer is included here for simplicity-->
+<style>
+  /*This sets the timer at the middle of the page*/
+
+  #timer-padding{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+  /*This contains the timer*/
+  #timer{
+      font-family: Arial;
+      display: inline-block;
+      align-content: center; 
+      text-align: center; 
+      font-size:3rem; 
+      font-weight: 300;
+      border-radius: 12px;
+      border-color: black;
+      padding:0.5rem 4rem;
+      background-color: cornsilk;
+    }
+
+    .buttons{
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    button{
+      padding: 0.45rem 0.75rem;
+      /*The buttons are displayed in a row by default but vertical margins are necessary for when the tab is minimised*/
+      margin: 0.3rem 0.3rem; 
+      border-radius: 8px;
+      font-size: 1.5rem;
+      transition:0.4s;
+      background-color: cornsilk;
+      color: black;
+      cursor: pointer;
+    }
+</style>
+
+
+<script>
+// JavaScript stylings for Pomodoro timer
+class PomodoroTimer {
+  constructor(workDuration = 25, breakDuration = 5) // work and break timings entered in minutes
+  {
+    this.workDuration = workDuration * 60; // Converts work and break timings to seconds
+    this.breakDuration = breakDuration * 60;
+    this.timeRemaining = this.workDuration;
+    this.breakRemaining = this.breakDuration;
+    this.isRunning = false;
+    this.isWorkSession = true;
+    this.intervalId = null;
+  }
+
+  // Settings for start and pause
+  start() {
+    if (this.isRunning) return;
+    this.isRunning = true;
+    this.intervalId = setInterval(() => this.rest(), 1000);
+  }
+
+  pause() {
+    this.isRunning = false;
+    if (this.intervalId) clearInterval(this.intervalId);
+  }
+
+  //This starts the work period immediatly, clearing any remaining break time
+  work() {  
+    this.pause();
+    this.isWorkSession = true;
+    this.timeRemaining = this.workDuration; 
+  }
+
+  // This starts the break immediately, clearing any remaining work time
+  break(){  
+    this.pause()
+    this.isWorkSession = false;
+    this.timeRemaining = this.breakDuration;
+  }
+
+  //countdown funtion
+  rest() {
+    if (this.timeRemaining > 0) {
+      this.timeRemaining--;
+    } else {
+      this.switchSession();
+    }
+  }
+
+  switchSession() {
+    this.isWorkSession = !this.isWorkSession;
+    this.timeRemaining = this.isWorkSession ? this.workDuration : this.breakDuration;
+  }
+
+
+  //Displays time remaining to nearest second
+  getTimeRemaining() {
+    return this.timeRemaining;
+  }
+
+  getFormattedTime() {
+    const minutes = Math.floor(this.timeRemaining / 60);
+    const seconds = this.timeRemaining % 60;
+    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  }
+
+  isWorkSessionActive() {
+    return this.isWorkSession;
+  }
+}
+
+/*Setting the initial timer instance*/
+const timer = new PomodoroTimer(25, 5); 
+const display = document.getElementById('timer');
+
+document.getElementById('start').onclick = () => timer.start();
+document.getElementById('pause').onclick = () => timer.pause();
+document.getElementById('work').onclick = () => timer.work();
+document.getElementById('break').onclick = () => timer.break();
+
+setInterval(() => {
+  display.textContent = timer.getFormattedTime();
+}, 100);
+
+
+
+// The below JavaScript section applies GSAP to make the headers slide in when the page loads
+
+      // Load animations on page load
+      gsap.from(".roll-text", {
+        x: -300,
+        opacity: 0,
+        duration: 5,
+        ease: "power3.out",
+        stagger: 0.3
+      });
+
+      gsap.from(".roll-text-right", {
+        x: 300,
+        opacity: 0,
+        duration: 5,
+        ease: "power3.out",
+        stagger: 0.3
+      });
+
+  </script>
+</div>
+</body>
+                   
+<!-- Footer --> 
+<div class="content">             
+<footer>
+
+  <p> 
+    <!-- Logo, Organisation name and copyright icon -->
+    <!-- The CSS styles the footer into 2 rows of 4 columns. Each of the 8 units equates to a paragraph in the html -->
+    <img src="logo.jpg" width="50%" height="auto"> <br>
+    <strong> &copy; 2025 The Dynamic Learners' Trust. </strong> <br> 
+		  Registered Charity Number: 0123456 
+  </p>
+    
+  <p> <strong> More information </strong>
+    <br> <span> Website Accessibility Statement </span> 
+    <br> <span> Safeguarding Statement </span>
+    <br> <span> Terms & Conditions </span> 
+    <br> <span> Code of Ethics </span> 
+    <br> <span> Privacy Policy </span>
+    <br> <span> Cookie Policy </span>
+    <br> <span> Careers </span>
+  </p>
+
+  <p> <strong> Resources for Schools and Parents</strong>
+    <br> <span> Report a Concern </span> 
+    <br> <span> Programme Plans </span>
+    <br> <span> Partnerships </span> 
+    <br> <span> Contact Us  </span><br>
+  </p>
+
+  <p> <strong> Resources for Students </strong> 
+    <br> <span> <a href="learnercharter.html">Learner Charter </a> </span>
+    <br> <span> <a href="studymaterials.html"> Study Materials </a>  </span>
+    <br> <span> <a href="join.html">Apply to Volunteer</a> </span>
+  </p>
+
+  <p> 
+    <!-- Empty space to push further text to the right-->
+   
+   </p>
+
+  <p> 
+    <!-- Empty space to push further text to the right-->
+  </p>
+
+  <p> 
+    <!-- Empty space to push further text to the right-->
+  </p>
+
+  <p> <strong> Website Design by: </strong> U.C. Obiagwu
+    <br> <span> <strong> Contact: </strong> CoolDesigns@gmail.com </span> <br> 
+    <br> All trademarks shown are the properties of their respective owners.
+  </p>
+
+</footer>
+</div>
+
+</html>
