@@ -21,10 +21,10 @@ Pexels. https://www.pexels.com/photo/aerial-photography-of-york-minster-cathedra
 Pexels. https://www.pexels.com/photo/harewood-house-with-elegant-gardens-in-england-34476320/ <br>
 (Accessed 17th November 2025)  
 
-• OpenAI (2026). Logo for a student academic coach organisation. <br>
+• OpenAI (2025). Logo for a student academic coach organisation. <br>
 (Generative AI chat). ChatGPT. Initial Prompt("Create a logo for a student academic coach organisation") <br>
 Chat Link: https://chatgpt.com/share/697e0abb-8ee8-800d-b457-3e4c2e867a0f  <br>
-(Accessed 1st February 2026)  
+(Accessed 30th December 2025)  
 
 • Pixabay (2017). London Cityscape (London) <br>
 Pexels. https://www.pexels.com/photo/london-cityscape-460672/ <br>
