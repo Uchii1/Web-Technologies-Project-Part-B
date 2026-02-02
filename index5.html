@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<!-- Setting html document language to English-->
+<html lang = "en">
+
+<!-- Settings for character encoding and device compatibility-->
+<meta charset = "UTF-8">
+<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- Page head (contains metadata) - Page title, favicon and linking to CSS and JavaScript files-->
+<head> 
+<title>Home - Dynamic Tutors</title> 
+<link rel="icon" type="Image/jpg" href="logo-favicon.ico">
+<link rel="stylesheet" href="index.css">
+<script src ="script.js"></script>
+</head>
+
+<!-- Body of Webpage-->
+<body>
+
+<!-- Header for top of page-->
+<header>
+<div class="header">
+ <!-- logo is styled with CSS --> 
+ <img src="logo.jpg" class="logo" alt="Logo">
+  <div>
+   <h1> Dynamic Tutors</h1>
+   <p> ... Catalysing Sustained Progress and Momentum for Learning </p>
+  </div>
+</div>
+</header>
+ 
+<!-- Navigation Bar-->
+
+<nav>
+ <a href="index5.html" class="active"> Home  </a> 
+ <a href="join.html"> Join Us </a>
+ <a href="about.html"> About Us </a> 
+ <a href="contact.html"> Contact Us </a> 
+</nav>
+
+<!-- Styling for animated tagline with JavaScript-->
+<div class="tagline" style="text-align: center;">
+  <h1> We're building  <span class = "word" id="adjective" style="color:azure">confident</span> <br>
+     students through individualised <br>tutoring and support. </h1>
+   
+    <script>
+    const words = ['engaged', 'curious', 'driven', 'innovative','resilient', 'empowered', 'dynamic'];
+    let i = 0;
+    const el = document.getElementById('adjective');
+    
+    setInterval(() => {
+        el.classList.add('fade');
+        setTimeout(() => {  
+            i = (i + 1) % words.length;  
+            el.textContent = words[i];
+            //'dynamic' appears in a different font color (black)
+            if (words[i] === 'dynamic'){
+              el.style.color = 'black';
+            } else{
+                el.style.color = 'azure';
+            }
+            el.classList.remove('fade');  
+        }, 500); //0.5 second fade animation suration
+    }, 2000);  // 2 second delay between words
+    </script>
+
+</div>
+
+
+
+<div class="home">
+  <p> <h3 style="color: black;"> 
+    We recruit and train university student volunteers as tutors and mentors for school students. <br>
+	 Through partnerships with schools and colleges, we deliver innovative programmes designed to boost learner engagement, material retention
+		and exam performance, while also developing our participants' social skills and extra-curricular engagement.
+  </p> </h3>
+			
+  <a href="about.html">
+  <button class="btn" onclick="openModal()"> Learn More </button>
+  </a>
+</div>
+
+<!-- Main Content of the Page-->
+  <div class = "section" section id="programmes">
+  <!-- <div class = "section" section id ="programmes"> -->
+    
+	<h3> Upcoming Programmes </h3>
+	   <div class = "cards" id = "programmeCards"> 
+
+                <div class = "card">
+		            <h4> St Anne's School, York </h4>
+                    <p><b>Dates:</b> January 2026 - March 2026 </p>
+                    <p><b>Times:</b> Mondays, 3:00 PM - 4:30 PM </p>
+                    <p><b>Location:</b> St Annes School Hall, <br> Edgbaston Lane, York. YO10 3HD.</p>
+					<p><b> Volunteer Spaces:</b> 7 </p>
+                </div>
+
+                  <div class = "card">
+		            <h4> City Road College, Birmingham </h4>
+                    <p><b>Dates:</b> January 2026 - March 2026 </p>
+                    <p><b>Times:</b> Wednesdays, 3:00 PM - 4:30 PM </p>
+                    <p><b>Location:</b> College Hall,<br> City Road, Birmingham. B17 6HJ.</p>
+					<p><b> Volunteer Spaces Remaining:</b> 5 </p>
+				  </div>
+
+          		<div class = "card">
+		            <h4> Ruby School, London </h4>
+                    <p><b>Dates:</b> January 2026 - March 2026 </p>
+                    <p><b>Times:</b> Tuesdays, 3:30 PM - 5:00 PM </p>
+                    <p><b>Location:</b> Ruby School Hall, <br> Townhall Road, London. SE15 2NL.</p>
+					<p><b> Volunteer Spaces Remaining:</b> 9 </p>
+					</div>
+
+				    <div class = "card">
+		            <h4> Meadow Hall Sixth-form, Cardiff </h4>
+                    <p><b>Dates:</b> April 2026 - June 2026 </p>
+                    <p><b>Times:</b> Fridays, 3:30 PM - 5:00 PM </p>
+                    <p><b>Location:</b> Meadow Hall School, <br> Elvetham Road, Cardiff. CF13 4RG.</p>
+					<p><b> Volunteer Spaces Remaining:</b> 16 </p>
+					</div>
+
+					<div class = "card">
+		            <h4> Rivers School, Leeds </h4>
+                    <p><b>Dates:</b> April 2026 - June 2026 </p>
+                    <p><b>Times:</b> Thursdays, 3:30 PM - 5:00 PM </p>
+                    <p><b>Location:</b> Rivers School,<br> Oakbrook Lane, Leeds. LS24 3ND.</p>
+					<p><b> Volunteer Spaces Remaining:</b> 8 </p>
+					</div>
+
+          <div class = "card">
+		            <h4> Red Cloak School, York <br> (Online Programme) </h4>
+                    <p><b>Dates:</b> April 2026 - June 2026 </p>
+                    <p><b>Times:</b> Mondays, 3:00 PM - 4:30 PM </p>
+                    <p><b>Location:</b> Online via MS Teams</p>
+					<p><b> Volunteer Spaces Remaining:</b> 31 </p>
+					</div>
+
+          <div class = "card">
+		            <h4> Greenwood College, Cardiff <br> (Online Programme) </h4>
+                    <p><b>Dates:</b> April 2026 - July 2026 </p>
+                    <p><b>Times:</b> Fridays, 3:30 PM - 5:00 PM </p>
+                    <p><b>Location:</b> Online via MS Teams</p>
+					<p><b> Volunteer Spaces Remaining:</b> 26 </p>
+					</div>
+
+					<div class = "card">
+		            <h4> Emerald Sixth-form College, London </h4>
+                    <p><b>Dates:</b> September 2026 - December 2026 </p>
+                    <p><b>Times:</b> Tuesdays, 4:30 PM - 6:00 PM </p>
+                    <p><b>Location:</b> Emerald School Hall,<br> Bird Road, London. SW14 5HJ.</p>
+					<p><b> Volunteer Spaces Remaining:</b> 17 </p>
+					</div>
+
+          	<div class = "card">
+		            <h4> Blue Springs School, Birmingham <br> (Online Programme) </h4>
+                    <p><b>Dates:</b> September 2026 - December 2026 </p>
+                    <p><b>Times:</b> Fridays, 2:30 PM - 4:00 PM </p>
+                    <p><b>Location:</b> Online via MS Teams </p>
+					<p><b> Volunteer Spaces Remaining:</b> 19 </p>
+					</div>
+
+        
+        </div>
+        </div>
+	
+	
+                   
+<!-- Footer -->                  
+<footer>
+
+    <p> 
+    <!-- Logo, Organisation name and copyright icon -->
+    <!-- The CSS styles the footer into 2 rows of 4 columns. Each of the 8 units equates to a paragraph in the html -->
+    <img src="logo.jpg" width="50%" height="auto"> <br>
+    <strong> &copy; 2025 The Dynamic Learners' Trust. </strong> <br> 
+		  Registered Charity Number: 0123456 
+    </p>
+    
+    <p> <strong> More information </strong>
+    <br> <span> Website Accessibility Statement </span> 
+    <br> <span>Safeguarding Statement </span>
+    <br> <span> Terms & Conditions </span> 
+    <br> <span> Code of Ethics </span> 
+    <br> <span>Privacy Policy </span>
+    <br> <span> Cookie Policy </span>
+    <br> <span> Careers </span>
+    </p>
+
+    <p> <strong> Resources for Schools and Parents</strong>
+    <br> <span> Report a Concern </span> 
+    <br> <span> Programme Plans </span>
+    <br> <span> Partnerships </span> 
+    <br> <span> Contact Us  </span><br>
+    </p>
+
+  	<p> <strong> Resources for Students </strong> 
+    <br> <span> <a href="learnercharter.html"> Learner Charter </a> </span>
+    <br> <span> <a href="studymaterials.html"> Study Materials </a> </span>
+    <br> <span> <a href="join.html">Apply to Volunteer</a> </span>
+    </p>
+
+    <p> 
+    <!-- Empty space to push further text to the right-->
+  
+    </p>
+
+    <p> 
+    <!-- Empty space to push further text to the right-->
+    </p>
+
+    <p> 
+    <!-- Empty space to push further text to the right-->
+    </p>
+
+    <p> <strong> Website Design by: </strong> U.C. Obiagwu
+    <br> <span> <strong> Contact: </strong> CoolDesigns@gmail.com </span> <br> 
+    <br> All trademarks shown are the properties of their respective owners.
+    </p>
+
+</footer>
+
+
+
+
+</body>
+</html>
+
