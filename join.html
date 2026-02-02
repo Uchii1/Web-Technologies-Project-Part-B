@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<!-- Setting HTML document language to English-->
+<html lang = "en">
+
+<!-- Settings for character encoding and device compatibility-->
+<meta charset = "UTF-8">
+<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Page title, favicon and linking to CSS and JavaScript files-->
+<head> 
+<title> Join Us - Dynamic Tutors </title> 
+<link rel="icon" type="Image/jpg" href="logo-favicon.ico">
+<link rel="stylesheet" href="index.css">
+<script src ="script.js"></script>
+</head>
+
+<!-- Body of Webpage-->
+<body>
+
+<!-- Header for top of page-->
+<header>
+<div class="header">
+ <!-- logo is styled with CSS --> 
+ <img src="logo.jpg" class="logo" alt="Logo">
+  <div>
+   <h1> Dynamic Tutors</h1>
+   <p> ... Catalysing Sustained Progress and Momentum for Learning </p>
+  </div>
+</div>
+</header>
+    
+<!-- Navigation Bar-->
+
+<nav>
+ <a href="index5.html"> Home  </a> 
+ <a href="join.html" class="active"> Join Us </a>
+ <a href="about.html"> About Us </a> 
+ <a href="contact.html"> Contact Us </a> 
+</nav>
+
+<!-- JOIN US-->
+
+<h2 id="contact" >  Apply to Join Us as a Tutor</h2>
+<div class="contact">
+  <p> Thanks for your interest in Dynamic Tutors! 
+  If you would like to apply to join one of our programmes as a coach, please fill in the application from below.
+  and we will be in contact shortly.
+  <br> Fields marked with an asterisk (<span style="color: red;">*</span>) must be filled.
+  </p>
+</div>
+  
+
+<!-- Using div class here helps to ensure each item shous up neatly, with margin alignments, on different screens-->
+<div class = "joining-from">
+<form>
+  <div class="joining-form-field">
+    <label for="FirstName"> <b>First Name: <span style="color: red;">*</span> </label> </b> 
+    <input type="text" id="FirstName" placeholder=""> 
+  </div>
+
+  <div class="joining-form-field">
+    <label for="LastName"> <b>Last Name: <span style="color: red;">*</span> </label> </b> 
+    <input type="text" id="LastName" placeholder=""> 
+  </div>
+
+  <div class="joining-form-field">
+    <label for="PreferredName"> <b>Preferred Name: <span style="color: red;">*</span> </label> </b> 
+    <input type="text" id="PreferredName" placeholder=""> 
+  </div>
+
+  <div class="joining-form-field">
+    <label for="BirthDate"> <b>Date of Birth: <span style="color: red;">*</span> </label> </b> 
+    <input type="date" id="BirthDate" placeholder="01/01/2008"> <br>
+    <small> To volunteer on our programmes, you must be at least 18 years old at the start of your training. </small>
+  </div>
+
+  <div class="joining-form-field">
+    <label for="PhoneNumber"> <b>Mobile Number <span style="color: red;">*</span> </label> </b> 
+    <input type="tel" id="PhoneNumber" placeholder=" "> <br>
+    <small> To volunteer on our programmes, you must be at least 18 years old at the start of your training. </small>
+  </div>
+
+  <div class="joining-form-field">
+    <label for="EmailAddress"> <b>Email Address <span style="color: red;">*</span> </label> </b>
+    <input type="email" id="EmailAddress" placeholder="example@domain.com"> <br>
+    <small> Important updates will be sent here, so please provide an email address you access regularly. </small> <br>
+  </div>
+
+  <div class="joining-form-field">
+    <label for="University"> <b>University <span style="color: red;">*</span> </label> </b>
+    <input type="text" id="University" placeholder=" "> <br>
+    <small>Provide the name of the university you currently attend, or most recently attended. </small> <br>
+  </div>
+
+    <div class="joining-form-field">
+    <label for="DegreeSubject"> <b> Degree Subject <span style="color: red;">*</span> </label> </b>
+    <input type="text" id="DegreeSubject" placeholder=" "> <br>
+    <small>Provide the name of the university you currently attend, or most recently attended. </small> <br>
+  </div>
+
+
+
+
+  <div class="joining-form-field">
+  <label for="city"><b>Preferred Location<span style="color: red;">*</span></label></b>
+  <select id="city">
+    <option value="">Please Select</option>
+    <option value="London">London</option>
+    <option value="Biringham">Birmingham</option>
+    <option value="Cardiff">Cardiff</option>
+    <option value="Leeds">Leeds</option>
+    <option value="Online">Online Programmes</option>
+  </select>
+</div>
+
+
+
+
+
+
+    <p>  <b style="display: inline; width:auto;"> Preferred Subject(s): <span style="color: red;">*</span></b> </p>
+      <div class="subjects">
+          <label><input type="checkbox" name="subjects" value="maths"> Maths</label>
+          <label><input type="checkbox" name="subjects" value="english"> English</label>
+          <label><input type="checkbox" name="subjects" value="physics"> Physics</label>
+          <label><input type="checkbox" name="subjects" value="biology"> Biology</label>
+          <label><input type="checkbox" name="subjects" value="chemistry"> Chemistry</label>
+          <label><input type="checkbox" name="subjects" value="history"> History </label>
+          <label><input type="checkbox" name="subjects" value="literature"> Literature </label>
+          <label><input type="checkbox" name="subjects" value="furthermaths"> Further Maths </label>
+        </div>
+      <br> <small> Please see our <a href="about.html#FAQ"> FAQs </a> for more information on the academic requirements to tutor</small>
+
+    <p> <input type="checkbox" name="subjects"> I agree to the Terms and Conditions and to the Privacy Policy. </p>
+    <p> <input type="submit" value="Submit" style="font-weight:bold;"> </p>
+    
+</form>   
+</div>
+
+
+
+
+
+                    
+<!-- Footer -->                  
+<footer>
+
+    <p> 
+    <!-- Logo, Organisation name and copyright icon -->
+    <!-- The CSS styles the footer into 2 rows of 4 columns. Each of the 8 units equates to a paragraph in the html -->
+    <img src="logo.jpg" width="50%" height="auto"> <br>
+    <strong> &copy; 2025 The Dynamic Learners' Trust. </strong> <br> 
+		  Registered Charity Number: 0123456 
+    </p>
+    
+    <p> <strong> More information </strong>
+    <br> <span> Website Accessibility Statement </span> 
+    <br> <span>Safeguarding Statement </span>
+    <br> <span> Terms & Conditions </span> 
+    <br> <span> Code of Ethics </span> 
+    <br> <span>Privacy Policy </span>
+    <br> <span> Cookie Policy </span>
+    <br> <span> Careers </span>
+    </p>
+
+    <p> <strong> Resources for Schools and Parents</strong>
+    <br> <span> Report a Concern </span> 
+    <br> <span> Programme Plans </span>
+    <br> <span> Partnerships </span> 
+    <br> <span> Contact Us  </span><br>
+    </p>
+
+  	<p> <strong> Resources for Students </strong> 
+    <br> <span> <a href="learnercharter.html"> Learner Charter </a> </span>
+    <br> <span> <a href="studymaterials.html"> Study Materials </a> </span>
+    <br> <span> <a href="join.html">Apply to Volunteer</a> </span>
+    </p>
+
+    <p> 
+    <!-- Empty space to push further text to the right-->
+    <!-- Can add content here: social  media links?-->
+    </p>
+
+    <p> 
+    <!-- Empty space to push further text to the right-->
+    </p>
+
+    <p> 
+    <!-- Empty space to push further text to the right-->
+    </p>
+
+    <p> <strong> Website Design by: </strong> U.C. Obiagwu
+    <br> <span> <strong> Contact: </strong> CoolDesigns@gmail.com </span> <br> 
+    <br> All trademarks shown are the properties of their respective owners.
+    </p>
+
+</footer>
+
+
+
+</body>
+</html>

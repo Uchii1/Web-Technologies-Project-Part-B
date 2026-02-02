@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<!-- Setting html document language to English-->
+<html lang = "en">
+
+<!-- Settings for character encoding and device compatibility-->
+<meta charset = "UTF-8">
+<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Page title, favicon and linking to CSS and JavaScript files-->
+<head> 
+  <title> Our Learner Charter - Dynamic Tutors </title> 
+  <link rel="icon" type="Image/jpg" href="logo-favicon.ico">
+  <link rel="stylesheet" href="index.css">
+
+  <!--<script src ="script.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+</head>
+
+<!-- Body of Webpage-->
+<body>
+
+<!-- Header for top of page-->
+<header>
+  <div class="header">
+    
+    <!-- logo is styled with CSS --> 
+    <img src="logo.jpg" class="logo" alt="Logo">
+    
+    <div>
+      <h1> Dynamic Tutors</h1>
+        <p>... Catalysing Sustained Progress and Momentum for Learning</p>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation Bar-->
+<nav>
+  <a href="index5.html"> Home  </a> 
+  <a href="join.html"> Join Us </a>
+  <a href="about.html"> About Us </a> 
+  <a href="contact.html"> Contact Us </a> 
+</nav>
+
+
+<!-- Main Content of the Page-->
+  
+<h1> Our Learner Charter </h1>
+  <p> The Dynamic Tutor learner charter sets out our responsibilities towards our learners during our programmes,
+  and what we expect from our learners in turn.
+  Through our learner charter, we aim to provide a conducive learning environment and retain high student engagement.
+  </p>
+
+<h2 class="roll-text"> Our Commitment to Our Learners </h2>
+  <p> At Dynamic Tutors, our promise is to:</p>
+
+  <ul>
+    <li> Provide a safe and focused environment for learning  </li>
+    <li> Ensure students are matched to tutors with competencies tailored to each learner's needs</li>
+    <li> Help our students set clear objectives for their progress </li>
+    <li> Maintain our student's confidentiality and uphold our safeguarding policy </li>
+    <li> Handle any safeguarding concerns raised with care according to relevant regulations and our published policy  </li>
+    <li> Provide signposting to further support as appropriate </li>
+  </ul>
+
+
+<h2 class="roll-text-right">  Our Expectations of Our Learners </h2>
+  <p>We expect our learners to: </p>
+
+  <ul>
+    <li> Show due respect for tutors, facilitators and other learners. </li>
+    <li> Attend sessions well prepared, with all books, materials and stationery required. </li>
+    <li> Attend sessions on time, and stay physically present and mentally engaged until the end of the session. </li>
+    <li> Ask for help when needed, and remain open to learning and growth. </li>
+    <li> Respect the privacy and confidentiality of other learners. </li>
+    <li> Refrain from using their mobile phones during sessions, except in an emergency or where expressly permitted by a tutor or facilitator </li>
+  </ul>
+
+    
+<!-- The JavaScript makes the headers slide in when the page loads-->
+  <script>
+      // Load animations on page load
+      gsap.from(".roll-text", {
+        x: -300,
+        opacity: 0,
+        duration: 5,
+        ease: "power3.out",
+        stagger: 0.3
+      });
+
+      gsap.from(".roll-text-right", {
+        x: 300,
+        opacity: 0,
+        duration: 5,
+        ease: "power3.out",
+        stagger: 0.3
+      });
+
+  </script>
+
+</body>
+                   
+<!-- Footer -->                  
+<footer>
+
+  <p> 
+    <!-- Logo, Organisation name and copyright icon -->
+    <!-- The CSS styles the footer into 2 rows of 4 columns. Each of the 8 units equates to a paragraph in the html -->
+    <img src="logo.jpg" width="50%" height="auto"> <br>
+    <strong> &copy; 2025 The Dynamic Learners' Trust. </strong> <br> 
+		  Registered Charity Number: 0123456 
+  </p>
+    
+  <p> <strong> More information </strong>
+    <br> <span> Website Accessibility Statement </span> 
+    <br> <span>Safeguarding Statement </span>
+    <br> <span> Terms & Conditions </span> 
+    <br> <span> Code of Ethics </span> 
+    <br> <span>Privacy Policy </span>
+    <br> <span> Cookie Policy </span>
+    <br> <span> Careers </span>
+  </p>
+
+  <p> <strong> Resources for Schools and Parents</strong>
+    <br> <span> Report a Concern </span> 
+    <br> <span> Programme Plans </span>
+    <br> <span> Partnerships </span> 
+    <br> <span> Contact Us  </span><br>
+  </p>
+
+  <p> <strong> Resources for Students </strong> 
+    <br> <span> <a href="learnercharter.html">Learner Charter </a> </span>
+    <br> <span> <a href="studymaterials.html"> Study Materials </a>  </span>
+    <br> <span> <a href="join.html">Apply to Volunteer</a> </span>
+  </p>
+
+  <p> 
+    <!-- Empty space to push further text to the right-->
+   
+   </p>
+
+  <p> 
+    <!-- Empty space to push further text to the right-->
+  </p>
+
+  <p> 
+    <!-- Empty space to push further text to the right-->
+  </p>
+
+  <p> <strong> Website Design by: </strong> U.C. Obiagwu
+    <br> <span> <strong> Contact: </strong> CoolDesigns@gmail.com </span> <br> 
+    <br> All trademarks shown are the properties of their respective owners.
+  </p>
+
+</footer>
+
+
+
+
+</html>
