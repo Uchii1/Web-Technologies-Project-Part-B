@@ -5,7 +5,7 @@
 The project output is a website for a fictional volunteer coach organisation. The website is styled with HTML, CSS and JavaScript. 
 The GSAP library has been used for JavaScript animations.
 
-
+## Navigation Instructions
 There are six pages in total. The main four can be accessed from the navigation bar at the top of the page.
 The other two are the first two links under the 'Resources for Students' heading at the footer of the page. 
 The third link under this heading leads to the 'Join Us' page.
