@@ -398,11 +398,10 @@
     height: 1.5rem;}
 
 
-/* might remove*/
+/*Arranges subjects on the form in three columns */
 .subjects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /*Arranges subjects on the form in three columns */
   gap: 10px;
   column-gap: 0.1rem;
 }
@@ -462,4 +461,5 @@
         footer p {
             font-size: 15px;
         }
+
 
