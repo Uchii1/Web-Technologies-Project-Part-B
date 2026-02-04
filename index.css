@@ -6,7 +6,7 @@
         margin: 2rem 0 0 0 ;
     }
 
-    /* Styles foor font size h1 within the header */
+    /* Styles for font size h1 within the header */
 
     /* Styles text: Dynamic Tutors*/
     .header h1 {
@@ -341,8 +341,8 @@
   grid-template-rows: auto;
   border-spacing: 0;}  
   
-/* CAN REMOVE THE BELOW */
-/* This adjsuts the box color when a mouse hoovers over them.*/
+
+/* This formats the boxes when a mouse hoovers over them.*/
 .city:hover {
   background: orange;
   box-shadow: 0 10px 12px rgba(0,0,0,0.2);
@@ -461,5 +461,6 @@
         footer p {
             font-size: 15px;
         }
+
 
 
