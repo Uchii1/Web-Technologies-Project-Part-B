@@ -1,20 +1,24 @@
 # READ ME
-# Web Technologies Project Part B
+# Web Technologies Module Project Part B
 
 ## Background
-The project output is a website for a fictional volunteer coach organisation. The website is styled with HTML, CSS and JavaScript. 
+The project output is a website for a fictional volunteer tutor organisation. The website is styled with HTML, CSS and JavaScript. 
 The GSAP library has been used for JavaScript animations.
 
 ## Navigation Instructions
-There are six pages in total. The main four can be accessed from the navigation bar at the top of the page.
+There are six pages in total. The main four can be accessed from the navigation bar at the top of each page.
 The other two are the first two links under the 'Resources for Students' heading at the footer of the page. 
 The third link under this heading leads to the 'Join Us' page.
 
-##
+## Possible Future Improvements
+* Additional practical features, such as a calculator (which can be styled with Pyscript or JavaScript).
+* Sound effects on the Pomodoro timer (potentially with a JavaScript library like howler.js)
+* A separate tab on the navigation bar for the 'Resources for Students' pages, which can include a dropdown navigation menu to make each page accessible.
 
-### Image Attributions
+
+## Image Attributions
 • Atkins, D (2019). An old castle under cloudy sky (Cardiff) <br>
-Pexels. https://www.pexels.com/photo/person-writing-notes-on-her-notebook-6929190/<br>
+Pexels. https://www.pexels.com/photo/an-old-castle-under-cloudy-sky-6241160/<br>
 (Accessed 16th November 2025)  
 
 • Explore Heritage (2023). Aerial Photography of York Minster Cathedral (York) <br>
